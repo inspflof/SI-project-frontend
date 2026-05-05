@@ -1,11 +1,11 @@
 import type { RouteObject } from "react-router";
 
-import App from "./App.tsx";
+import ParkingDashboardPage from "./views/ParkingDashboard.tsx";
 
 const routes: RouteObject[] = [
     {
         path: "/",
-        element: <App />
+        element: <ParkingDashboardPage />
     }
 ]
 
