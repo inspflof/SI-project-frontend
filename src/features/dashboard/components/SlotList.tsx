@@ -1,6 +1,8 @@
 import type { SlotType } from "../types.ts/slotApi.types.ts";
 import Slot from "./Slot.tsx";
 
+import styles from "./SlotList.module.css"
+
 type Props = {
     slots: SlotType[] | null;
     loading: boolean;
@@ -16,7 +18,9 @@ export default function SlotList({ slots, loading, error }: Props) {
 
 
     return (
-        <div>
+        <div
+            className={styles.slotList}
+        >
             {slots.map((slot) => (
                 <Slot 
                     key={slot.id}
