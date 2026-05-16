@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import routes from './routes.tsx'
 const router = createBrowserRouter(routes)
 
+import "./styles/global.css"
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <RouterProvider router={router} />

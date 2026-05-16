@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import slotApi from "../api/slots.ts";
-import type { SlotType } from "../types.ts/slotApi.types.ts";
+import type { SlotType } from "../../../types/slot.type.ts";
 
 export default function useParkingDashboard() {
     const [slots, setSlots] = useState<SlotType[] | null>(null)

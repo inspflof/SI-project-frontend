@@ -1,4 +1,4 @@
-import type { SlotType } from "../types.ts/slotApi.types.ts";
+import type { SlotType } from "../../../types/slot.type.ts";
 import Slot from "./Slot.tsx";
 
 import styles from "./SlotList.module.css"
