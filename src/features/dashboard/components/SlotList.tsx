@@ -4,7 +4,7 @@ import Slot from "./Slot.tsx";
 import styles from "./SlotList.module.css"
 
 type Props = {
-    slots: SlotType[] | null;
+    slots: SlotType[] | undefined;
     loading: boolean;
     error: string | null;
 }
