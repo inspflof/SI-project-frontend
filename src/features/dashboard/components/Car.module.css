@@ -1,0 +1,11 @@
+.processing {
+    background: blue;
+}
+
+.done {
+    background: green;
+}
+
+.error {
+    color: red;
+}

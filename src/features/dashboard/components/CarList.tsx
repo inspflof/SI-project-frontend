@@ -1,6 +1,8 @@
 import type { VehicleType } from "../../../types/vehicle.type"
 import Car from "./Car";
 
+import styles from "./CarList.module.css"
+
 type Props = {
     carList: VehicleType[] | null;
     error: string | null;
@@ -27,7 +29,7 @@ export default function CarList({ carList, error, loading }: Props) {
     }
 
     return (
-        <table>
+        <table className={styles.table}>
             <tr>
                 <th>Immatriculation</th>
                 <th>Status</th>
