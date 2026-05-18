@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 export default function DropCar() {
     const { createCar, error: carError, loading: carLoading } = useCreateCar()
-    const { createCommand, command, error: commandError, loading: commandLoading } = useCreateCommand()
+    const { createCommand, error: commandError, loading: commandLoading } = useCreateCommand()
     const navigate = useNavigate()
 
     const [immatriculation, setImmatriculation] = useState<string>("")

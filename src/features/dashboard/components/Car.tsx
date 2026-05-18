@@ -12,7 +12,7 @@ type Props = {
     recoverError: string | null;
 }
 
-export default function Car({ car, handleRecover, recoverError, recoverLoading }:Props) {
+export default function Car({ car, handleRecover, recoverLoading }:Props) {
     return (
         <tr>
             <td>{car.immatriculation}</td>
