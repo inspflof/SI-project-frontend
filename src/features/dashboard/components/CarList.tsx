@@ -35,19 +35,23 @@ export default function CarList({ carList, error, loading, handleRecover, recove
 
     return (
         <table className={styles.table}>
-            <tr>
-                <th>Immatriculation</th>
-                <th>Status</th>
-            </tr>
-            {carList.map((car) => (
-                <Car 
+            <thead>
+                <tr>
+                    <th>Immatriculation</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {carList.map((car) => (
+                    <Car 
                     car={car}
                     key={car.id}
                     handleRecover={handleRecover}
                     recoverError={recoverError}
                     recoverLoading={recoverLoading}
-                />
-            ))}
+                    />
+                ))}
+            </tbody>
         </table>
     )
 }

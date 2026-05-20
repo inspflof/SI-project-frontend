@@ -1,6 +1,8 @@
+const API_URL = import.meta.env.VITE_API_URL
+
 const slot = {
     async getAll() {
-        const res: Response = await fetch("/api/slot", {
+        const res: Response = await fetch(`${API_URL}/api/slot`, {
             headers: {
                 "Content-Type": "application/json"
             }
