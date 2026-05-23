@@ -4,7 +4,7 @@ const API_URL = import.meta.env.VITE_API_URL
 
 const car = {
     async getAll(): Promise<VehicleType[]> {
-        const res: Response = await fetch(`${API_URL}/api/vehicle`, {
+        const res: Response = await fetch(`${API_URL}/vehicle`, {
             headers: {
                 "Content-Type": "application/json"
             }

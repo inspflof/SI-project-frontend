@@ -2,7 +2,7 @@ const API_URL = import.meta.env.VITE_API_URL
 
 const command = {
     async getAll() {
-        const res: Response = await fetch(`${API_URL}/api/command`, {
+        const res: Response = await fetch(`${API_URL}/command`, {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -15,7 +15,7 @@ const command = {
     },
 
     async create(type: string, vehicleId: string) {
-        const res: Response = await fetch("/api/command", {
+        const res: Response = await fetch(`${API_URL}/command`, {
             headers: {
                 "Content-Type": "application/json"
             },
