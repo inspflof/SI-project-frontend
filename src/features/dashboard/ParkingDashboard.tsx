@@ -9,6 +9,8 @@ export default function ParkingDashboard() {
     const { data: cars, loading: carLoading, error: carError } = useAllCar()
     const { error: recoverCarError, loading: recoverCarLoading, recoverCar } = useRecoverCar()
 
+    const carsFiltered = cars?.filter((car) => car.command?.[0].status !== "DONE")
+
     return (
         <div>
             <SlotList 
@@ -19,7 +21,7 @@ export default function ParkingDashboard() {
             <CarList 
                 error={carError}
                 loading={carLoading}
-                carList={cars}
+                carList={carsFiltered}
                 handleRecover={recoverCar}
                 recoverError={recoverCarError}
                 recoverLoading={recoverCarLoading}
