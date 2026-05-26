@@ -13,23 +13,24 @@ type Props = {
 }
 
 export default function Car({ car, handleRecover, recoverLoading }:Props) {
+    const command = car.command?.[0]
     return (
         <tr>
             <td>{car.immatriculation}</td>
             <td
                className={clsx(
-                    car.command?.[0]?.status === "PROCESSING" && styles.processing, 
-                    car.command?.[0]?.status === "DONE" && styles.done,
-                    car.command?.[0]?.status === "ERROR" && styles.error,
+                    command?.status === "PROCESSING" && styles.processing, 
+                    command?.status === "DONE" && styles.done,
+                    command?.status === "ERROR" && styles.error,
                )} 
-            >{car.command?.[0]?.status ?? "No command"}</td>
+            >{command?.status ?? "No command"}</td>
             <td>
-                {(car.command[0].status === "DONE" && car.command[0].type === "PARK") && (
+                {(command?.status === "DONE" && car.command[0].type === "PARK") && (
                     <ArrowUpFromLine
                         onClick={() => handleRecover(car.id)}
                     />
                 )}
-                {(car.command[0].status === "DONE" && car.command[0].type === "PARK" && recoverLoading) && (
+                {(command?.status === "DONE" && car.command[0].type === "PARK" && recoverLoading) && (
                     <Loader />
                 )}
             </td>
