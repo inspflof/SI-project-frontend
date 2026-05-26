@@ -9,7 +9,7 @@ export default function ParkingDashboard() {
     const { data: cars, loading: carLoading, error: carError } = useAllCar()
     const { error: recoverCarError, loading: recoverCarLoading, recoverCar } = useRecoverCar()
 
-    const carsFiltered = cars?.filter((car) => car.command?.[0].status !== "DONE")
+    const carsFiltered = cars?.filter((car) => car.command?.[0].status !== "DONE" || car.command?.[0].type !== "RETRIEVE")
 
     return (
         <div>
