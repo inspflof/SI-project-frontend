@@ -6,7 +6,7 @@ import styles from "./CarList.module.css"
 import type { CommandType } from "../../../types/commandApi.type";
 
 type Props = {
-    carList: VehicleType[] | null;
+    carList: VehicleType[] | undefined;
     error: string | null;
     loading: boolean;
     handleRecover: (vehicleId: string) => Promise<CommandType>;
